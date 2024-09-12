@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Body mass index</string>
+    <string name="ETHeightHint">Введите ваш рост (в см)</string>
+    <string name="ETWeightHint">Введите ваш вес (в кг)</string>
+    <string name="BTNCalculateText">Рассчитать</string>
+    <string name="IV_BodyType_ContentDescription">Body Type Image</string>
+</resources>
