@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -33,11 +34,14 @@ class MainActivity : AppCompatActivity() {
             val height = editTextHeight.text.toString().toDoubleOrNull()
             val weight = editTextWeight.text.toString().toDoubleOrNull()
 
-            if (height != null && weight != null) {
+            if (height != null && weight != null && height > 100 && weight > 20) {
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra("height", height)
                 intent.putExtra("weight", weight)
                 startActivity(intent)
+            } else {
+                Toast.makeText(this, "Некорректные значения веса и роста", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
